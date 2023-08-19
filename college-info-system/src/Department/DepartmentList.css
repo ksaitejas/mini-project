@@ -1,0 +1,75 @@
+/* styles for the tree view */
+.tree-view {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .tree-view ul {
+    margin-left: 20px;
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  .tree-view li {
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .tree-view li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 100%;
+    border-left: 1px solid #ccc;
+  }
+  
+  .tree-view li:last-child:before {
+    height: 16px;
+  }
+  
+  .tree-view li.collapsed:before {
+    height: 16px;
+  }
+  
+  .tree-view li > ul {
+    display: none;
+  }
+  
+  .tree-view li.collapsed > ul {
+    display: block;
+  }
+  
+  .tree-view li label {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .tree-view li input[type="checkbox"] {
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .tree-view li input[type="checkbox"] + label:before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+  }
+  
+  .tree-view li input[type="checkbox"]:checked + label:before {
+    content: '\2713';
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+  }
+  
